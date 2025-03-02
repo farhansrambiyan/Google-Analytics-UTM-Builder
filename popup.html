@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTM Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/logo.png" alt="UTM Builder Logo" class="logo">
+        </div>
+
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="generate">Generate</button>
+            <button class="tab-button" data-tab="templates">Templates</button>
+            <button class="tab-button" data-tab="history">History</button>
+        </div>
+
+        <div id="generate" class="tab-content active">
+            <form id="utmForm">
+                <div class="input-group">
+                    <label for="source">Source:</label>
+                    <input type="text" id="source" class="input-field">
+                </div>
+                <div class="input-group">
+                    <label for="medium">Medium:</label>
+                    <input type="text" id="medium" class="input-field">
+                </div>
+                <div class="input-group">
+                    <label for="campaign">Campaign:</label>
+                    <input type="text" id="campaign" class="input-field">
+                </div>
+                <div class="input-group">
+                    <div class="inline-label">
+                        <label for="customParamToggle">Add Custom Parameter:</label>
+                        <input type="checkbox" id="customParamToggle" class="input-field checkbox-inline">
+                    </div>
+                    <div id="customParamContainer" style="display: none;">
+                        <div class="flex-input-group">
+                            <label for="customParamKey">Key:</label>
+                            <input type="text" id="customParamKey" placeholder="Key" class="input-field">
+                        </div>
+                        <div class="flex-input-group">
+                            <label for="customParamValue">Value:</label>
+                            <input type="text" id="customParamValue" placeholder="Value" class="input-field">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="button">Generate URL</button>
+            </form>
+            <button id="saveTemplateButton" class="button">Save as Template</button>
+            <div id="result"></div>
+            <button id="copyButton" style="display: none;" class="button">Copy to Clipboard</button>
+        </div>
+
+        <div id="templates" class="tab-content">
+            <h3>Saved Templates</h3>
+            <table id="templateTable">
+                <thead>
+                    <tr>
+                        <th>Template</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody id="templateList"></tbody>
+            </table>
+            <button id="loadTemplateButton" class="button disabled">Load Template</button>
+            <button id="deleteTemplateButton" class="button">Delete Template</button>
+        </div>
+
+        <div id="history" class="tab-content">
+            <h3>History</h3>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Copy</th>
+                    </tr>
+                </thead>
+                <tbody id="historyList"></tbody>
+            </table>
+            <button id="clearHistoryButton" class="button">Clear History</button>
+        </div>
+<div class="footer">
+          <a href="https://www.buymeacoffee.com/farhansrambiyan" target="_blank"><img src="bmc-button 1.png" class="imgl"></a>
+      <p class="footertext">Visit My Website<br><a href="https://far.hn/?utm_source=extension&utm_medium=utm+builder&utm_campaign=" target="_blank">far.hn</a>
+        </div>
+    </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+
+    
