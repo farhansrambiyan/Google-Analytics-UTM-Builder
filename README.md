@@ -45,6 +45,10 @@ Contributions are welcome! Feel free to submit pull requests or report issues vi
 
 ### Getting Started
 
+Install from here: https://chromewebstore.google.com/detail/google-analytics-utm-buil/ghhpgbckobngiaohcfljdpbpgcklnggp
+
+Or
+
 1. **Clone the Repository**:
 
 2. **Load the Extension in Chrome**:
